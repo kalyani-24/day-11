@@ -1,0 +1,404 @@
+ The server generated these startup warnings when booting
+   2024-07-26T22:41:34.401-07:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------MongoDB:          7.0.12
+Using Mongosh:          2.2.12
+ciet> db.customer.find()
+[ustomer to db ciete: https://docs.mongodb.com/mongodb-shell/
+  {dent 112.00 KiB
+    _id: 1,.00 KiB
+    name: 'avigna',
+    age: 32,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 4,
+    name: 'modi',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 5,
+    name: 'lathamangeskar',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: ObjectId('66a47daaa59cb40878eebd3d'),
+    name: 'anjali',
+    aadhar: '9876543209',
+    pan: '98765432123',
+    salary: 10000
+  }
+]
+ciet> db.customer.updateOne({name:"Cbn"},{$set:{salary:15000}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+ciet> db.customer.find()
+[
+  {
+    _id: 1,
+    name: 'avigna',
+    age: 32,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 4,
+    name: 'modi',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 5,
+    name: 'lathamangeskar',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: ObjectId('66a47daaa59cb40878eebd3d'),
+    name: 'anjali',
+    aadhar: '9876543209',
+    pan: '98765432123',
+    salary: 10000
+  }
+]
+ciet> db.customer.find()
+[
+  {cknowledged: true,
+    _id: 1,d: null,
+    name: 'avigna',
+    age: 32,unt: 1,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 15000
+  },
+  {
+    _id: 4,
+    name: 'modi',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: 5,
+    name: 'lathamangeskar',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 10000
+  },
+  {
+    _id: ObjectId('66a47daaa59cb40878eebd3d'),
+    name: 'anjali',
+    aadhar: '9876543209',
+    pan: '98765432123',
+    salary: 10000
+  }
+]
+ciet> db.customer.updateMany({},{$inc:{salary:2000}});
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+ciet> db.customer.find()
+[
+  {
+    _id: 1,
+    name: 'avigna',
+    age: 32,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 17000
+  },
+  {
+    _id: 4,
+    name: 'modi',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000
+  },
+  {
+    _id: 5,
+    name: 'lathamangeskar',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000
+  },
+  {
+    _id: ObjectId('66a47daaa59cb40878eebd3d'),
+    name: 'anjali',
+    aadhar: '9876543209',
+    pan: '98765432123',
+    salary: 12000
+  }
+]
+ciet>
+MongoServerError: Performing an update on the path '_id' would modify the immutable field '_id'
+iet> db.customer.updateMany({},{$set:{city:[{area:"guntur",pincode:098765,state:"ap",country:"india"}]}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+ciet> db.customer.find()
+[
+  {
+    _id: 1,
+    name: 'avigna',
+    age: 32,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 17000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 4,
+    name: 'modi',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 5,
+    name: 'lathamangeskar',
+    age: 87,
+    dob: '1987-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: ObjectId('66a47daaa59cb40878eebd3d'),
+    name: 'anjali',
+    aadhar: '9876543209',
+    pan: '98765432123',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  }
+]
+ciet> db.customer.find().limit(3);
+[
+  {
+    _id: 1,
+    name: 'avigna',
+    age: 32,
+    dob: '2001-10-10',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 2,
+    name: 'sammu',
+    age: 43,
+    dob: '1998-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 12000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  },
+  {
+    _id: 3,
+    name: 'CBN',
+    age: 79,
+    dob: '1965-01-01',
+    address: 'india',
+    email: 'india@gmail.com',
+    salary: 17000,
+    city: [
+      { area: 'guntur', pincode: 98765, state: 'ap', country: 'india' }
+    ]
+  }
+]
+ciet> db.customer.find({age:43}).count();
+1
+ciet> db.customer.find({age;43}).display();
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:21)
+
+> 1 | db.customer.find({age;43}).display();
+    |                      ^
+  2 |
+
+ciet> db.customer.find({age:43}).display();
+TypeError: db.customer.fi ... e:43}).display is not a function
+ciet> db.customer.find({age:79}).forEach(printjson);
+{
+  _id: 3,
+  name: 'CBN',
+  age: 79,
+  dob: '1965-01-01',
+  address: 'india',
+  email: 'india@gmail.com',
+  salary: 17000,
+  city: [
+    {
+      area: 'guntur',
+      pincode: 98765,
+      state: 'ap',
+      country: 'india'
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
